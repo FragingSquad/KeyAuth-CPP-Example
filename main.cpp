@@ -17,11 +17,11 @@ using namespace KeyAuth;
 *
 */
 
-std::string name = (XorStr("Testter").c_str());
-std::string ownerid = (XorStr("f4I9MXAvTf").c_str());
-std::string secret = (XorStr("9a738f5b1f71f8e0e81340db034201e6f979b0b0867dca137913a62bab9f518d").c_str());
-std::string version = (XorStr("1.0").c_str());
-std::string seller = (XorStr("5c603d3a4d2c688cb3e8eedc540c84c0").c_str());
+std::string name = (XorStr("").c_str());
+std::string ownerid = (XorStr("").c_str());
+std::string secret = (XorStr("").c_str());
+std::string version = (XorStr("").c_str());
+std::string seller = (XorStr("").c_str());
 
 
 api KeyAuthApp(name, ownerid, secret, version, seller);
@@ -45,8 +45,6 @@ int main()
 	{
 		exit(0);
 	}
-
-	//system(XorStr("cls").c_str());
 
 	std::cout << XorStr("\n\n [1] Login\n [2] Register\n [3] Upgrade\n [4] License key only\n\n Choose option: ");
 
@@ -98,13 +96,14 @@ int main()
 		Sleep(3000);
 		exit(0);
 	}
-
+	
+	//Chat testing
 	KeyAuthApp.chatsend("Test", "main");
 	for (const auto message : KeyAuthApp.chatget("main")) {
 
 		std::cout << message.message << std::endl;
 	}
-
+	
 	//
 	//std::cout << XorStr("\n\n User data:");
 	//std::cout << XorStr("\n Username: ");
